@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — ResumeForge</title>
+  <link rel="stylesheet" href="../cssFile/globalStyles.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">ResumeForge</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+    <button class="dark-toggle" id="darkToggle">🌙</button>
+  </nav>
+
+  <section style="max-width:700px; margin:0 auto;">
+    <div style="text-align:center; margin-bottom:2.5rem;">
+      <h1 class="section-title">Get In Touch</h1>
+      <p class="section-sub">Have a question or feedback? We'd love to hear from you.</p>
+    </div>
+
+    <div class="card">
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="cname">Full Name</label>
+          <input type="text" id="cname" name="cname" placeholder="Your name" required />
+        </div>
+        <div class="form-group">
+          <label for="cemail">Email Address</label>
+          <input type="email" id="cemail" name="cemail" placeholder="you@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="How can we help?" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+        <p id="formMsg" style="margin-top:1rem; text-align:center; font-weight:600;"></p>
+      </form>
+    </div>
+
+    <div class="card-grid" style="margin-top:2rem;">
+      <div class="card" style="max-width:200px; text-align:center; padding:1.4rem;">
+        <div style="font-size:1.8rem;">📧</div>
+        <p style="font-size:0.88rem; color:var(--clr-muted); margin-top:0.5rem;">support@resumeforge.com</p>
+      </div>
+      <div class="card" style="max-width:200px; text-align:center; padding:1.4rem;">
+        <div style="font-size:1.8rem;">📍</div>
+        <p style="font-size:0.88rem; color:var(--clr-muted); margin-top:0.5rem;">University of Gujrat, Pakistan</p>
+      </div>
+      <div class="card" style="max-width:200px; text-align:center; padding:1.4rem;">
+        <div style="font-size:1.8rem;">🕐</div>
+        <p style="font-size:0.88rem; color:var(--clr-muted); margin-top:0.5rem;">Mon–Fri: 9am – 6pm PKT</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>© 2025 <strong style="color:var(--clr-accent);">ResumeForge</strong>. All rights reserved.</span>
+    <span><a href="login.html">Login</a> &nbsp;|&nbsp; <a href="signup.html">Sign Up</a></span>
+  </footer>
+
+  <script src="../jsFile/jsFunctions.js"></script>
+</body>
+</html>
