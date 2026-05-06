@@ -20,8 +20,8 @@
     <button class="dark-toggle" id="darkToggle">🌙</button>
   </nav>
 
-  <section style="max-width:700px; margin:0 auto;">
-    <div style="text-align:center; margin-bottom:2.5rem;">
+  <section class="contact-section">
+    <div class="section-header">
       <h1 class="section-title">Get In Touch</h1>
       <p class="section-sub">Have a question or feedback? We'd love to hear from you.</p>
     </div>
@@ -44,29 +44,29 @@
           <label for="message">Message</label>
           <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
-        <p id="formMsg" style="margin-top:1rem; text-align:center; font-weight:600;"></p>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p id="formMsg" class="form-msg"></p>
       </form>
     </div>
 
-    <div class="card-grid" style="margin-top:2rem;">
-      <div class="card" style="max-width:200px; text-align:center; padding:1.4rem;">
-        <div style="font-size:1.8rem;">📧</div>
-        <p style="font-size:0.88rem; color:var(--clr-muted); margin-top:0.5rem;">support@resumeforge.com</p>
+    <div class="card-grid contact-info-grid">
+      <div class="card contact-info-card">
+        <div class="contact-icon">📧</div>
+        <p class="contact-info-text">support@resumeforge.com</p>
       </div>
-      <div class="card" style="max-width:200px; text-align:center; padding:1.4rem;">
-        <div style="font-size:1.8rem;">📍</div>
-        <p style="font-size:0.88rem; color:var(--clr-muted); margin-top:0.5rem;">University of Gujrat, Pakistan</p>
+      <div class="card contact-info-card">
+        <div class="contact-icon">📍</div>
+        <p class="contact-info-text">University of Gujrat, Pakistan</p>
       </div>
-      <div class="card" style="max-width:200px; text-align:center; padding:1.4rem;">
-        <div style="font-size:1.8rem;">🕐</div>
-        <p style="font-size:0.88rem; color:var(--clr-muted); margin-top:0.5rem;">Mon–Fri: 9am – 6pm PKT</p>
+      <div class="card contact-info-card">
+        <div class="contact-icon">🕐</div>
+        <p class="contact-info-text">Mon–Fri: 9am – 6pm PKT</p>
       </div>
     </div>
   </section>
 
   <footer class="footer">
-    <span>© 2025 <strong style="color:var(--clr-accent);">ResumeForge</strong>. All rights reserved.</span>
+    <span>© 2025 <strong class="footer-brand">ResumeForge</strong>. All rights reserved.</span>
     <span><a href="login.html">Login</a> &nbsp;|&nbsp; <a href="signup.html">Sign Up</a></span>
   </footer>
 

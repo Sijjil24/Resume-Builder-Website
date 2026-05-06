@@ -390,3 +390,149 @@ section { padding: 4rem 2.5rem; }
   .hero p { font-size: 0.95rem; }
   .stats-row { flex-direction: column; }
 }
+/* ── FEATURES SECTION ── */
+.features-section {
+  background: var(--clr-surface);
+  padding: 4rem 2.5rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.feature-card {
+  max-width: 300px;
+  text-align: center;
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-heading {
+  font-family: var(--font-display);
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  color: var(--clr-muted);
+  font-size: 0.93rem;
+}
+
+/* ── TEMPLATES SECTION ── */
+.templates-section {
+  padding: 4rem 2.5rem;
+  text-align: center;
+}
+
+.template-card {
+  max-width: 280px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.template-card-body {
+  padding: 1.2rem;
+}
+
+.template-card-title {
+  font-family: var(--font-display);
+}
+
+.template-card-text {
+  color: var(--clr-muted);
+  font-size: 0.88rem;
+  margin: 0.4rem 0 1rem;
+}
+
+.template-card-body .btn-primary {
+  width: 100%;
+}
+
+/* ── FOOTER ── */
+.footer-brand {
+  color: var(--clr-accent);
+}
+/* ── CONTACT SECTION ── */
+.contact-section {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ── CONTACT FORM ── */
+.card form .btn-primary {
+  width: 100%;
+}
+
+.form-msg {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* ── CONTACT INFO CARDS ── */
+.contact-info-grid {
+  margin-top: 2rem;
+}
+
+.contact-info-card {
+  max-width: 200px;
+  text-align: center;
+  padding: 1.4rem;
+}
+
+.contact-icon {
+  font-size: 1.8rem;
+}
+
+.contact-info-text {
+  font-size: 0.88rem;
+  color: var(--clr-muted);
+  margin-top: 0.5rem;
+}
+/* ── DASHBOARD ── */
+.dashboard-sub {
+  margin-bottom: 0;
+}
+/* ── LOGIN ── */
+.auth-card .btn-primary {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+/* ── SERVICES SECTION ── */
+.services-section {
+  text-align: center;
+}
+
+.service-card {
+  max-width: 300px;
+  text-align: center;
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.service-card-text {
+  color: var(--clr-muted);
+  font-size: 0.93rem;
+  margin-bottom: 1.2rem;
+}
+
+/* ── PRICING SECTION ── */
+.pricing-section {
+  background: var(--clr-surface);
+}
+
+.pricing-table-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* Signup button full width */
+.auth-card .btn-primary {
+  width: 100%;
+  margin-top: 0.5rem;
+}
