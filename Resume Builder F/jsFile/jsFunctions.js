@@ -1,105 +1,71 @@
-/* ── DARK MODE ──────────────────────────────── */
-function initDarkMode() {
-  const toggle = document.getElementById('darkToggle');
-  if (!toggle) return;
-  const saved = localStorage.getItem('theme');
-  if (saved === 'dark') document.body.classList.add('dark');
-  toggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+document.addEventListener("DOMContentLoaded", () => {
+  const darkToggle = document.getElementById("darkToggle");
+  const navBurger = document.getElementById("navBurger");
+  const navLinks = document.getElementById("navLinks");
+  const body = document.body;
+
+  // 1. Dark Mode Logic
+  if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark");
+    if(darkToggle) darkToggle.textContent = "☀️";
+  }
+
+  if (darkToggle) {
+    darkToggle.addEventListener("click", () => {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        localStorage.setItem("theme", "dark");
+        darkToggle.textContent = "☀️";
+      } else {
+        localStorage.setItem("theme", "light");
+        darkToggle.textContent = "🌙";
+      }
+    });
+  }
+
+  // 2. Mobile Navbar Menu Logic
+  if (navBurger && navLinks) {
+    navBurger.addEventListener("click", () => {
+      navLinks.classList.toggle("nav-open");
+    });
+  }
+
+  // 3. Modal Open & Close Logic (Natively replacing React useState)
+  const modalTriggers = document.querySelectorAll('[data-modal]');
+  const modalCloses = document.querySelectorAll('.modal-close');
+
+  modalTriggers.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const modalId = btn.getAttribute('data-modal');
+      const modal = document.getElementById(modalId);
+      if (modal) modal.classList.add('active'); // No inline styles used!
+    });
   });
-}
 
-/* ── ACTIVE NAV LINK ────────────────────────── */
-function setActiveNav() {
-  const page = location.pathname.split('/').pop();
-  document.querySelectorAll('.nav-links a').forEach(a => {
-    if (a.getAttribute('href') === page || a.getAttribute('href') === '../' + page) {
-      a.classList.add('active');
-    }
+  modalCloses.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const modal = e.target.closest('.modal-overlay');
+      if (modal) modal.classList.remove('active');
+    });
   });
-}
 
-/* ── LOGIN FORM ─────────────────────────────── */
-function initLogin() {
-  const form = document.getElementById('loginForm');
-  if (!form) return;
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const email = form.email.value.trim();
-    const pass  = form.password.value;
-    if (!email || !pass) return alert('Please fill all fields.');
-    localStorage.setItem('loggedUser', email);
-    window.location.href = 'dashboard.html';
-  });
-}
+  // 4. Stock Table Search Filter Logic (Natively replacing React filter)
+  const searchInput = document.getElementById('searchInput');
+  const stockRows = document.querySelectorAll('#stockTable tbody tr');
 
-/* ── SIGNUP FORM ────────────────────────────── */
-function initSignup() {
-  const form = document.getElementById('signupForm');
-  if (!form) return;
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const name  = form.fullname.value.trim();
-    const email = form.email.value.trim();
-    const pass  = form.password.value;
-    const conf  = form.confirm.value;
-    if (!name || !email || !pass) return alert('Please fill all fields.');
-    if (pass !== conf) return alert('Passwords do not match.');
-    localStorage.setItem('loggedUser', email);
-    window.location.href = 'dashboard.html';
-  });
-}
-
-/* ── CONTACT FORM ───────────────────────────── */
-function initContact() {
-  const form = document.getElementById('contactForm');
-  if (!form) return;
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const msg = document.getElementById('formMsg');
-    msg.textContent = '✅ Message sent! We\'ll get back to you shortly.';
-    msg.style.color = '#27ae60';
-    form.reset();
-  });
-}
-
-/* ── DASHBOARD RESUME TABLE ─────────────────── */
-function initDashboard() {
-  const tbody = document.getElementById('resumeBody');
-  if (!tbody) return;
-
-  const resumes = [
-    { name: 'Software Engineer CV', template: 'Modern', date: '2025-04-10', status: 'Published' },
-    { name: 'Frontend Developer',   template: 'Classic', date: '2025-04-18', status: 'Draft'     },
-    { name: 'UI/UX Designer',       template: 'Elegant', date: '2025-04-22', status: 'Published' },
-  ];
-
-  tbody.innerHTML = resumes.map((r, i) => `
-    <tr>
-      <td>${r.name}</td>
-      <td>${r.template}</td>
-      <td>${r.date}</td>
-      <td><span class="badge ${r.status === 'Published' ? 'badge-green' : 'badge-orange'}">${r.status}</span></td>
-      <td>
-        <button class="btn btn-ghost" style="padding:0.3rem 0.8rem;font-size:0.82rem;" onclick="editResume(${i})">Edit</button>
-        <button class="btn btn-ghost" style="padding:0.3rem 0.8rem;font-size:0.82rem;margin-left:0.4rem;color:var(--clr-danger);" onclick="deleteResume(this,${i})">Delete</button>
-      </td>
-    </tr>
-  `).join('');
-}
-
-function editResume(i) { alert('Opening resume editor for entry ' + (i + 1) + '...'); }
-function deleteResume(btn, i) {
-  if (confirm('Delete this resume?')) btn.closest('tr').remove();
-}
-
-/* ── INIT ALL ───────────────────────────────── */
-document.addEventListener('DOMContentLoaded', () => {
-  initDarkMode();
-  setActiveNav();
-  initLogin();
-  initSignup();
-  initContact();
-  initDashboard();
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const term = e.target.value.toLowerCase();
+      
+      stockRows.forEach(row => {
+        const text = row.textContent.toLowerCase();
+        // Uses class toggle instead of inline style row.style.display
+        if (text.includes(term)) {
+          row.classList.remove('hidden-row');
+        } else {
+          row.classList.add('hidden-row');
+        }
+      });
+    });
+  }
 });

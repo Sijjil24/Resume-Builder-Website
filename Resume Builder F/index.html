@@ -11,25 +11,49 @@
   <!-- NAVBAR -->
   <nav class="navbar">
     <span class="nav-logo">ResumeForge</span>
-    <ul class="nav-links">
+    <ul class="nav-links" id="navLinks">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="pages/services.html">Services</a></li>
       <li><a href="pages/dashboard.html">Dashboard</a></li>
       <li><a href="pages/contact.html">Contact</a></li>
       <li><a href="pages/login.html">Login</a></li>
     </ul>
-    <button class="dark-toggle" id="darkToggle">🌙</button>
+    <div class="nav-right">
+      <button class="dark-toggle" id="darkToggle">🌙</button>
+      <button class="nav-burger" id="navBurger">☰</button>
+    </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
     <h1>Build a Resume That<br><span>Gets You Hired</span></h1>
-    <p>Professional resume templates designed to impress recruiters. Create, customize, and download in minutes.</p>
+    <p>Professional resume templates designed to impress recruiters. Create, customise, and download in minutes — completely free.</p>
     <div class="hero-btns">
       <a href="pages/signup.html" class="btn btn-primary">Get Started Free</a>
       <a href="pages/services.html" class="btn btn-outline">View Templates</a>
     </div>
+    <p class="hero-note">No credit card required · Cancel anytime</p>
   </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat-pill">
+      <h2>10k+</h2>
+      <p>Users</p>
+    </div>
+    <div class="stat-pill">
+      <h2>50+</h2>
+      <p>Templates</p>
+    </div>
+    <div class="stat-pill">
+      <h2>98%</h2>
+      <p>ATS Pass Rate</p>
+    </div>
+    <div class="stat-pill">
+      <h2>4.9★</h2>
+      <p>Avg Rating</p>
+    </div>
+  </div>
 
   <!-- FEATURES -->
   <section class="features-section">
@@ -38,64 +62,184 @@
       <p class="section-sub">Everything you need to land your dream job.</p>
     </div>
     <div class="card-grid">
-      <div class="card feature-card">
+      <div class="card">
         <div class="feature-icon">🎨</div>
         <h3 class="card-heading">Beautiful Templates</h3>
         <p class="card-text">Choose from professionally designed templates for every industry.</p>
       </div>
-      <div class="card feature-card">
+      <div class="card">
         <div class="feature-icon">⚡</div>
         <h3 class="card-heading">Fast & Easy</h3>
         <p class="card-text">Fill in your details and download a polished resume in minutes.</p>
       </div>
-      <div class="card feature-card">
+      <div class="card">
         <div class="feature-icon">📄</div>
         <h3 class="card-heading">ATS Friendly</h3>
         <p class="card-text">Our resumes pass Applicant Tracking Systems used by top companies.</p>
+      </div>
+      <div class="card">
+        <div class="feature-icon">🔒</div>
+        <h3 class="card-heading">Secure & Private</h3>
+        <p class="card-text">Your data is encrypted and never shared with third parties.</p>
+      </div>
+      <div class="card">
+        <div class="feature-icon">🌍</div>
+        <h3 class="card-heading">Multi-Language</h3>
+        <p class="card-text">Build resumes in 12+ languages for global job markets.</p>
+      </div>
+      <div class="card">
+        <div class="feature-icon">📊</div>
+        <h3 class="card-heading">Real-Time Preview</h3>
+        <p class="card-text">See exactly how your resume looks as you type.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="steps-section">
+    <div class="section-header">
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-sub">Four simple steps to your perfect resume.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="card">
+        <span class="step-num">01</span>
+        <h3 class="card-heading">Pick a Template</h3>
+        <p class="card-text">Browse our library and choose a design that fits your industry and style.</p>
+      </div>
+      <div class="card">
+        <span class="step-num">02</span>
+        <h3 class="card-heading">Fill Your Details</h3>
+        <p class="card-text">Enter your work history, skills, and education in our guided builder.</p>
+      </div>
+      <div class="card">
+        <span class="step-num">03</span>
+        <h3 class="card-heading">Customise & Polish</h3>
+        <p class="card-text">Tweak colours, fonts, and layout with a live preview at every step.</p>
+      </div>
+      <div class="card">
+        <span class="step-num">04</span>
+        <h3 class="card-heading">Download & Apply</h3>
+        <p class="card-text">Export as a print-ready PDF and start applying to jobs immediately.</p>
       </div>
     </div>
   </section>
 
   <!-- TEMPLATES PREVIEW -->
   <section class="templates-section">
-    <h2 class="section-title">Popular Templates</h2>
-    <p class="section-sub">Hand-picked designs for a strong first impression.</p>
+    <div class="section-header">
+      <h2 class="section-title">Popular Templates</h2>
+      <p class="section-sub">Hand-picked designs for a strong first impression.</p>
+    </div>
     <div class="card-grid">
-      <div class="card template-card">
-        <img src="sources/image1.jpg" alt="Modern Template" />
-        <div class="template-card-body">
-          <h4 class="template-card-title">Modern Pro</h4>
-          <p class="template-card-text">Clean lines, bold headings.</p>
+      <div class="card">
+        <div class="img-frame">
+          <img src="sources/image1.jpg" alt="Modern Pro" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-heading">Modern Pro</h4>
+          <p class="card-text">Clean lines, bold headings.</p>
           <a href="pages/services.html" class="btn btn-primary">Use This</a>
         </div>
       </div>
-      <div class="card template-card">
-        <img src="sources/image2.jpg" alt="Classic Template" />
-        <div class="template-card-body">
-          <h4 class="template-card-title">Classic Elegant</h4>
-          <p class="template-card-text">Timeless, corporate-ready.</p>
+      <div class="card">
+        <div class="img-frame">
+          <img src="sources/image2.jpg" alt="Classic Elegant" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-heading">Classic Elegant</h4>
+          <p class="card-text">Timeless, corporate-ready.</p>
           <a href="pages/services.html" class="btn btn-primary">Use This</a>
         </div>
       </div>
-      <div class="card template-card">
-        <img src="sources/template1.jpg" alt="Creative Template" />
-        <div class="template-card-body">
-          <h4 class="template-card-title">Creative Bold</h4>
-          <p class="template-card-text">Stand out with colour.</p>
+      <div class="card">
+        <div class="img-frame">
+          <img src="sources/template1.jpg" alt="Creative Bold" />
+        </div>
+        <div class="card-body">
+          <h4 class="card-heading">Creative Bold</h4>
+          <p class="card-text">Stand out with colour.</p>
           <a href="pages/services.html" class="btn btn-primary">Use This</a>
         </div>
       </div>
     </div>
+    <div class="templates-cta">
+      <a href="pages/services.html" class="btn btn-outline">Browse All 50+ Templates →</a>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="features-section">
+    <div class="section-header">
+      <h2 class="section-title">What Our Users Say</h2>
+      <p class="section-sub">Real results from real job seekers.</p>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <p class="card-text">"I landed 3 interviews in one week after switching to a ResumeForge template. The ATS checker alone is worth it."</p>
+        <br>
+        <p class="card-heading">— Ayesha R., Software Engineer</p>
+      </div>
+      <div class="card">
+        <p class="card-text">"Super easy to use. I had a polished resume ready in under 20 minutes. Highly recommend to fresh graduates."</p>
+        <br>
+        <p class="card-heading">— Hassan M., Fresh Graduate</p>
+      </div>
+      <div class="card">
+        <p class="card-text">"The Modern Pro template got me past the HR filter at two Fortune 500 companies. I am now employed!"</p>
+        <br>
+        <p class="card-heading">— Sara K., Marketing Manager</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <h2 class="cta-title">Ready to build your resume?</h2>
+    <p class="section-sub">Join 10,000+ job seekers. Free to start — no credit card needed.</p>
+    <div class="hero-btns">
+      <a href="pages/signup.html" class="btn btn-primary">Create Free Account</a>
+      <a href="pages/contact.html" class="btn btn-outline">Talk to Us</a>
+    </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer">
-    <span>© 2025 <strong class="footer-brand">ResumeForge</strong>. All rights reserved.</span>
-    <span>
-      <a href="pages/contact.html">Contact</a> &nbsp;|&nbsp;
-      <a href="#">Privacy Policy</a> &nbsp;|&nbsp;
-      <a href="#">Terms</a>
-    </span>
+  <footer class="footer-full">
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <h3>ResumeForge</h3>
+        <p>Build professional resumes in minutes. Trusted by 10,000+ job seekers worldwide.</p>
+        <small>© 2025 ResumeForge. All rights reserved.</small>
+      </div>
+      <div class="footer-link-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="pages/services.html">Templates</a></li>
+          <li><a href="pages/services.html">Pricing</a></li>
+          <li><a href="pages/dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="footer-link-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-link-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Made with ❤️ by ResumeForge Team</span>
+      <span><a href="pages/contact.html">Support</a> &nbsp;|&nbsp; <a href="#">Privacy</a> &nbsp;|&nbsp; <a href="#">Terms</a></span>
+    </div>
   </footer>
 
   <script src="jsFile/jsFunctions.js"></script>

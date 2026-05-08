@@ -8,66 +8,205 @@
 </head>
 <body>
 
+  <!-- NAVBAR -->
   <nav class="navbar">
     <a href="../index.html" class="nav-logo">ResumeForge</a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="navLinks">
       <li><a href="../index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="dashboard.html">Dashboard</a></li>
       <li><a href="contact.html" class="active">Contact</a></li>
       <li><a href="login.html">Login</a></li>
     </ul>
-    <button class="dark-toggle" id="darkToggle">🌙</button>
+    <div class="nav-right">
+      <button class="dark-toggle" id="darkToggle">🌙</button>
+      <button class="nav-burger" id="navBurger">☰</button>
+    </div>
   </nav>
 
-  <section class="contact-section">
-    <div class="section-header">
-      <h1 class="section-title">Get In Touch</h1>
-      <p class="section-sub">Have a question or feedback? We'd love to hear from you.</p>
-    </div>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <h1 class="section-title">Get In Touch</h1>
+    <p class="section-sub">Have a question or feedback? We'd love to hear from you — usually reply within 24 hours.</p>
+  </section>
 
-    <div class="card">
-      <form id="contactForm">
-        <div class="form-group">
-          <label for="cname">Full Name</label>
-          <input type="text" id="cname" name="cname" placeholder="Your name" required />
-        </div>
-        <div class="form-group">
-          <label for="cemail">Email Address</label>
-          <input type="email" id="cemail" name="cemail" placeholder="you@email.com" required />
-        </div>
-        <div class="form-group">
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject" placeholder="How can we help?" required />
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Send Message</button>
-        <p id="formMsg" class="form-msg"></p>
-      </form>
-    </div>
-
-    <div class="card-grid contact-info-grid">
+  <!-- 4 TOP CARDS -->
+  <section>
+    <div class="steps-grid">
       <div class="card contact-info-card">
         <div class="contact-icon">📧</div>
-        <p class="contact-info-text">support@resumeforge.com</p>
+        <h4>Email Us</h4>
+        <p>support@resumeforge.com</p>
       </div>
       <div class="card contact-info-card">
         <div class="contact-icon">📍</div>
-        <p class="contact-info-text">University of Gujrat, Pakistan</p>
+        <h4>Our Location</h4>
+        <p>University of Gujrat,<br>Pakistan</p>
       </div>
       <div class="card contact-info-card">
-        <div class="contact-icon">🕐</div>
-        <p class="contact-info-text">Mon–Fri: 9am – 6pm PKT</p>
+        <div class="contact-icon">🕒</div>
+        <h4>Working Hours</h4>
+        <p>Mon–Fri: 9am – 6pm PKT</p>
+      </div>
+      <div class="card contact-info-card">
+        <div class="contact-icon">💬</div>
+        <h4>Live Chat</h4>
+        <p>Available on Pro & Team plans</p>
       </div>
     </div>
   </section>
 
-  <footer class="footer">
-    <span>© 2025 <strong class="footer-brand">ResumeForge</strong>. All rights reserved.</span>
-    <span><a href="login.html">Login</a> &nbsp;|&nbsp; <a href="signup.html">Sign Up</a></span>
+  <!-- FORM AND SIDEBAR -->
+  <section class="contact-body">
+    <div class="card contact-form-card">
+      <h2 class="section-title">Send a Message</h2>
+      <p class="card-text">Fill in the form and our team will respond promptly.</p>
+      <br>
+      
+      <form id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@email.com" required />
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="How can we help?" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select id="category" name="category" required>
+            <option value="" disabled selected>Select a topic...</option>
+            <option value="billing">Billing</option>
+            <option value="technical">Technical Support</option>
+            <option value="feedback">Feedback</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+    
+    <div class="contact-side">
+      <div class="card">
+        <h3 class="card-heading">Before You Write</h3>
+        <p class="card-text">Check our most common answers below — you might find your answer instantly without waiting.</p>
+      </div>
+      
+      <div class="card">
+        <h3 class="card-heading">Response Time</h3>
+        <ul class="response-list">
+          <li class="response-item">
+            <span class="badge badge-green">Free</span>
+            <span class="card-text">Within 48 hours</span>
+          </li>
+          <li class="response-item">
+            <span class="badge badge-orange">Pro</span>
+            <span class="card-text">Within 12 hours</span>
+          </li>
+          <li class="response-item">
+            <span class="badge badge-green">Team</span>
+            <span class="card-text">Within 4 hours</span>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="card">
+        <h3 class="card-heading">Follow Us</h3>
+        <br>
+        <div class="social-row">
+          <button class="btn btn-outline">X<br>Twitter</button>
+          <button class="btn btn-outline">in<br>LinkedIn</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section>
+    <div class="section-header">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-sub">Quick answers to the questions we hear most often.</p>
+    </div>
+    
+    <div class="faq-grid">
+      <div class="card faq-card">
+        <h4>How do I reset my password?</h4>
+        <p class="card-text">Go to the Login page and click "Forgot password?" — we will email you a reset link within 2 minutes.</p>
+      </div>
+      <div class="card faq-card">
+        <h4>Can I change my plan after signing up?</h4>
+        <p class="card-text">Yes. Head to your Dashboard → Settings → Billing and upgrade or downgrade at any time.</p>
+      </div>
+      <div class="card faq-card">
+        <h4>My PDF looks different from the preview.</h4>
+        <p class="card-text">Make sure you are using the latest Chrome or Edge browser. Safari may render fonts slightly differently.</p>
+      </div>
+      <div class="card faq-card">
+        <h4>Do you offer refunds?</h4>
+        <p class="card-text">We offer a full refund within 7 days of any paid subscription — no questions asked.</p>
+      </div>
+      <div class="card faq-card">
+        <h4>Is my data stored securely?</h4>
+        <p class="card-text">All data is encrypted in transit and at rest. We never sell or share your personal information.</p>
+      </div>
+      <div class="card faq-card">
+        <h4>Can I use ResumeForge on mobile?</h4>
+        <p class="card-text">Yes — the site is fully responsive. For the best building experience we recommend a desktop browser.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-full">
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <h3>ResumeForge</h3>
+        <p>Build professional resumes in minutes. Trusted by 10,000+ job seekers worldwide.</p>
+        <small>© 2025 ResumeForge. All rights reserved.</small>
+      </div>
+      <div class="footer-link-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="services.html">Templates</a></li>
+          <li><a href="services.html">Pricing</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="footer-link-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-link-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Made with ❤️ by ResumeForge Team</span>
+      <span><a href="contact.html">Support</a> &nbsp;|&nbsp; <a href="#">Privacy</a> &nbsp;|&nbsp; <a href="#">Terms</a></span>
+    </div>
   </footer>
 
   <script src="../jsFile/jsFunctions.js"></script>

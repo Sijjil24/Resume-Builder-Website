@@ -8,27 +8,79 @@
 </head>
 <body>
 
+  <!-- NAVBAR -->
   <nav class="navbar">
     <a href="../index.html" class="nav-logo">ResumeForge</a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="navLinks">
       <li><a href="../index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="dashboard.html">Dashboard</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="login.html">Login</a></li>
     </ul>
-    <button class="dark-toggle" id="darkToggle">🌙</button>
+    <div class="nav-right">
+      <button class="dark-toggle" id="darkToggle">🌙</button>
+      <button class="nav-burger" id="navBurger">☰</button>
+    </div>
   </nav>
 
-  <div class="auth-wrapper">
+  <div class="auth-page">
+    <div class="auth-panel">
+      <h2>Join 10,000+ job seekers already using ResumeForge</h2>
+      <p>Free to start. No credit card. Cancel anytime.</p>
+      
+      <ul class="perk-list">
+        <li class="perk-item">
+          <span class="perk-icon">🎨</span>
+          <span class="perk-text">50+ professional templates included</span>
+        </li>
+        <li class="perk-item">
+          <span class="perk-icon">📊</span>
+          <span class="perk-text">Live ATS score on every resume</span>
+        </li>
+        <li class="perk-item">
+          <span class="perk-icon">💾</span>
+          <span class="perk-text">Auto-save — never lose your work</span>
+        </li>
+        <li class="perk-item">
+          <span class="perk-icon">🚀</span>
+          <span class="perk-text">Get hired faster — avg. 2x more callbacks</span>
+        </li>
+      </ul>
+
+      <div class="mini-steps">
+        <div class="mini-step">
+          <h2>1</h2>
+          <div>
+            <strong>Create account</strong>
+            <p>Takes under 60 seconds.</p>
+          </div>
+        </div>
+        <div class="mini-step">
+          <h2>2</h2>
+          <div>
+            <strong>Pick a template</strong>
+            <p>Choose from 50+ designs.</p>
+          </div>
+        </div>
+        <div class="mini-step">
+          <h2>3</h2>
+          <div>
+            <strong>Fill your details</strong>
+            <p>Guided, step-by-step.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="auth-card">
       <h2>Create Account ✨</h2>
       <p>Join thousands building standout resumes.</p>
-
+      
       <form id="signupForm">
         <div class="form-group">
-          <label for="fullname">Full Name</label>
-          <input type="text" id="fullname" name="fullname" placeholder="Sia Khan" required />
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Sia Khan" required />
         </div>
         <div class="form-group">
           <label for="email">Email Address</label>
@@ -39,21 +91,20 @@
           <input type="password" id="password" name="password" placeholder="Min. 8 characters" required />
         </div>
         <div class="form-group">
-          <label for="confirm">Confirm Password</label>
-          <input type="password" id="confirm" name="confirm" placeholder="Repeat password" required />
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Repeat password" required />
         </div>
+        
+        <p class="card-text">
+          <br>
+          <small>By signing up you agree to our Terms and Privacy Policy.</small>
+          <br><br>
+        </p>
+
         <button type="submit" class="btn btn-primary">Create Account</button>
       </form>
-
-      <div class="auth-link">
-        Already have an account? <a href="login.html">Login</a>
-      </div>
     </div>
   </div>
-
-  <footer class="footer">
-    <span>© 2025 <strong class="footer-brand">ResumeForge</strong>. All rights reserved.</span>
-  </footer>
 
   <script src="../jsFile/jsFunctions.js"></script>
 </body>

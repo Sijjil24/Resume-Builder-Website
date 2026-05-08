@@ -8,57 +8,114 @@
 </head>
 <body>
 
+  <!-- NAVBAR -->
   <nav class="navbar">
     <a href="../index.html" class="nav-logo">ResumeForge</a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="navLinks">
       <li><a href="../index.html">Home</a></li>
       <li><a href="services.html" class="active">Services</a></li>
       <li><a href="dashboard.html">Dashboard</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="login.html">Login</a></li>
     </ul>
-    <button class="dark-toggle" id="darkToggle">🌙</button>
+    <div class="nav-right">
+      <button class="dark-toggle" id="darkToggle">🌙</button>
+      <button class="nav-burger" id="navBurger">☰</button>
+    </div>
   </nav>
 
-  <section class="services-section">
+  <!-- HERO -->
+  <section class="page-hero">
     <h1 class="section-title">Our Services</h1>
-    <p class="section-sub">Everything you need to build a career-winning resume.</p>
+    <p class="section-sub">Everything you need to build a career-winning resume — all in one place.</p>
+    <a href="signup.html" class="btn btn-primary">Get Started Free</a>
+  </section>
 
+  <!-- SERVICE CARDS GRID -->
+  <section>
     <div class="card-grid">
-      <div class="card service-card">
+      <div class="card">
         <div class="service-icon">📝</div>
         <h3 class="card-heading">Resume Builder</h3>
-        <p class="service-card-text">Step-by-step builder with live preview and multiple export options.</p>
+        <p class="card-text">Step-by-step builder with live preview and multiple export options.</p>
+        <br>
         <a href="login.html" class="btn btn-primary">Start Building</a>
       </div>
-      <div class="card service-card">
+      <div class="card">
         <div class="service-icon">🖼️</div>
         <h3 class="card-heading">Template Library</h3>
-        <p class="service-card-text">Browse 50+ professionally designed templates for any field.</p>
+        <p class="card-text">Browse 50+ professionally designed templates for any field.</p>
+        <br>
         <a href="login.html" class="btn btn-outline">Browse Templates</a>
       </div>
-      <div class="card service-card">
+      <div class="card">
         <div class="service-icon">🔍</div>
         <h3 class="card-heading">ATS Checker</h3>
-        <p class="service-card-text">Analyze your resume against job descriptions for keyword match.</p>
+        <p class="card-text">Analyse your resume against job descriptions for keyword match score.</p>
+        <br>
         <a href="login.html" class="btn btn-outline">Check Now</a>
       </div>
-      <div class="card service-card">
+      <div class="card">
         <div class="service-icon">💾</div>
         <h3 class="card-heading">PDF Export</h3>
-        <p class="service-card-text">Download your resume as a clean, print-ready PDF instantly.</p>
+        <p class="card-text">Download your resume as a clean, print-ready PDF instantly.</p>
+        <br>
         <a href="login.html" class="btn btn-primary">Export PDF</a>
+      </div>
+      <div class="card">
+        <div class="service-icon">✉️</div>
+        <h3 class="card-heading">Cover Letter Builder</h3>
+        <p class="card-text">Generate a matching cover letter in seconds using your resume data.</p>
+        <br>
+        <a href="login.html" class="btn btn-outline">Try Now</a>
+      </div>
+      <div class="card">
+        <div class="service-icon">🎯</div>
+        <h3 class="card-heading">Job Match Score</h3>
+        <p class="card-text">Paste any job description and get a personalised match percentage instantly.</p>
+        <br>
+        <a href="login.html" class="btn btn-outline">Get Score</a>
       </div>
     </div>
   </section>
 
-  <!-- PRICING TABLE -->
-  <section class="pricing-section">
+  <!-- PRICING SECTION -->
+  <section>
     <div class="section-header">
       <h2 class="section-title">Pricing Plans</h2>
-      <p class="section-sub">Simple pricing, no hidden fees.</p>
+      <p class="section-sub">Simple pricing — no hidden fees, no surprises.</p>
     </div>
-    <div class="table-wrap pricing-table-wrap">
+
+    <div class="pricing-cards">
+      <div class="card pricing-card">
+        <h3>Free</h3>
+        <h2>$0</h2>
+        <small>/ forever</small>
+        <p class="card-text">Perfect for getting started and exploring templates.</p>
+        <br>
+        <a href="signup.html" class="btn btn-outline">Get Started</a>
+      </div>
+      <div class="card pricing-card-featured">
+        <span class="pricing-badge">Most Popular</span>
+        <h3>Pro</h3>
+        <h2>$9</h2>
+        <small>/ month</small>
+        <p class="card-text">Everything you need to land your next role fast.</p>
+        <br>
+        <a href="signup.html" class="btn btn-primary">Start Pro</a>
+      </div>
+      <div class="card pricing-card">
+        <h3>Team</h3>
+        <h2>$19</h2>
+        <small>/ month</small>
+        <p class="card-text">For teams of up to 5 collaborating on career docs.</p>
+        <br>
+        <a href="signup.html" class="btn btn-outline">Start Team</a>
+      </div>
+    </div>
+
+    <!-- PRICING TABLE -->
+    <div class="table-wrap">
       <table>
         <thead>
           <tr>
@@ -69,20 +126,122 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td>Resume Templates</td><td>3</td><td>50+</td><td>50+</td></tr>
-          <tr><td>PDF Downloads</td><td>1/month</td><td>Unlimited</td><td>Unlimited</td></tr>
-          <tr><td>ATS Checker</td><td>❌</td><td>✅</td><td>✅</td></tr>
-          <tr><td>Cover Letter Builder</td><td>❌</td><td>✅</td><td>✅</td></tr>
-          <tr><td>Team Members</td><td>1</td><td>1</td><td>5</td></tr>
-          <tr><td>Priority Support</td><td>❌</td><td>✅</td><td>✅</td></tr>
+          <tr>
+            <td>Resume Templates</td>
+            <td>3</td>
+            <td>50+</td>
+            <td>50+</td>
+          </tr>
+          <tr>
+            <td>PDF Downloads</td>
+            <td>1 / month</td>
+            <td>Unlimited</td>
+            <td>Unlimited</td>
+          </tr>
+          <tr>
+            <td>ATS Checker</td>
+            <td>❌</td>
+            <td>✅</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td>Cover Letter Builder</td>
+            <td>❌</td>
+            <td>✅</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td>Job Match Score</td>
+            <td>❌</td>
+            <td>✅</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td>Team Members</td>
+            <td>1</td>
+            <td>1</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>Priority Support</td>
+            <td>❌</td>
+            <td>✅</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td>Custom Branding</td>
+            <td>❌</td>
+            <td>❌</td>
+            <td>✅</td>
+          </tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <footer class="footer">
-    <span>© 2025 <strong class="footer-brand">ResumeForge</strong>. All rights reserved.</span>
-    <span><a href="contact.html">Contact Us</a></span>
+  <!-- FAQ SECTION -->
+  <section>
+    <div class="section-header">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-sub">Still unsure? Here are answers to common questions.</p>
+    </div>
+    <div class="faq-grid">
+      <div class="card faq-card">
+        <h4>Can I try ResumeForge for free?</h4>
+        <p class="card-text">Yes — our Free plan gives you 3 templates and 1 PDF download per month with no credit card required.</p>
+      </div>
+      <div class="card faq-card">
+        <h4>Will my resume pass ATS filters?</h4>
+        <p class="card-text">All our templates are structured to pass modern ATS systems. Pro users also get a live keyword checker.</p>
+      </div>
+      <div class="card faq-card">
+        <h4>Can I cancel my subscription anytime?</h4>
+        <p class="card-text">Absolutely. Cancel from your dashboard at any time with no cancellation fees or hidden charges.</p>
+      </div>
+      <div class="card faq-card">
+        <h4>How many resumes can I create?</h4>
+        <p class="card-text">Free users can store up to 2 resumes. Pro and Team plans support unlimited resumes and drafts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-full">
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <h3>ResumeForge</h3>
+        <p>Build professional resumes in minutes. Trusted by 10,000+ job seekers worldwide.</p>
+        <small>© 2025 ResumeForge. All rights reserved.</small>
+      </div>
+      <div class="footer-link-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="services.html">Templates</a></li>
+          <li><a href="services.html">Pricing</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+      <div class="footer-link-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-link-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Made with ❤️ by ResumeForge Team</span>
+      <span><a href="contact.html">Support</a> &nbsp;|&nbsp; <a href="#">Privacy</a> &nbsp;|&nbsp; <a href="#">Terms</a></span>
+    </div>
   </footer>
 
   <script src="../jsFile/jsFunctions.js"></script>
